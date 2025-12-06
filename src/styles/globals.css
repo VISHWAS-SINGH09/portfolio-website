@@ -448,14 +448,21 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  padding: 10px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 2px solid var(--card-border);
+  gap: 5px;
+  z-index: 1001;
 }
 
 .bar {
   width: 25px;
   height: 3px;
   background-color: var(--text-primary);
-  margin: 3px 0;
+  border-radius: 2px;
   transition: 0.3s;
+  display: block;
 }
 
 /* Hero Section - Big Beautiful Header */
@@ -3009,16 +3016,17 @@ img {
   }
   
   .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    background: var(--bg-secondary);
-    flex-direction: column;
-    padding: 2rem;
-    transition: none !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    position: fixed !important;
+    top: 70px !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: calc(100vh - 70px) !important;
+    background: var(--bg-secondary) !important;
+    flex-direction: column !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    z-index: 999 !important;
+    overflow-y: auto !important;
   }
   
   .nav-menu.active {
@@ -3027,26 +3035,31 @@ img {
   
   .nav-toggle {
     display: flex !important;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1000;
-    position: relative;
+    flex-direction: column !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    background: var(--card-bg) !important;
+    border-radius: 8px !important;
+    border: 2px solid var(--accent-primary) !important;
+    z-index: 1001 !important;
+    position: relative !important;
   }
   
   .nav-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-primary);
-    border-radius: 2px;
-    transition: none !important;
+    width: 25px !important;
+    height: 3px !important;
+    background-color: var(--accent-primary) !important;
+    border-radius: 2px !important;
+    display: block !important;
   }
   
   .nav-link {
-    padding: 1rem 0;
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--card-border);
+    padding: 1rem 0 !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid var(--card-border) !important;
+    display: block !important;
+    width: 100% !important;
   }
   
   /* Hero section mobile */
