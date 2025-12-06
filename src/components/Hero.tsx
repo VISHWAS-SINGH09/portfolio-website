@@ -8,7 +8,7 @@ interface HeroProps {
   socialLinks?: SocialLink[];
 }
 
-export function Hero({ personal, ctaButtons, socialLinks = [] }: HeroProps) {
+export function Hero({ personal, ctaButtons }: HeroProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [displayedName, setDisplayedName] = useState('');
   const firstName = personal.name.split(' ')[0];

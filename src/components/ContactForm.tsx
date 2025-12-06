@@ -6,7 +6,46 @@ interface ContactFormProps {
 
 export function ContactForm({ accessKey }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'invalid-email'>('idle');
+
+  // List of allowed professional email domains
+  const allowedDomains = [
+    // Professional email providers
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'live.com',
+    'icloud.com', 'protonmail.com', 'zoho.com', 'aol.com',
+    // Corporate domains (common TLDs)
+    '.com', '.org', '.net', '.edu', '.gov', '.co', '.io', '.tech', '.ai'
+  ];
+
+  // Blocked/suspicious domains
+  const blockedDomains = [
+    'tempmail', 'throwaway', 'guerrillamail', 'mailinator', 
+    '10minutemail', 'fakeinbox', 'trashmail', 'yopmail',
+    'temp-mail', 'disposable', 'burner'
+  ];
+
+  const isValidEmail = (email: string): boolean => {
+    const emailLower = email.toLowerCase();
+    const domain = emailLower.split('@')[1];
+    
+    if (!domain) return false;
+
+    // Check if email is from blocked domain
+    for (const blocked of blockedDomains) {
+      if (domain.includes(blocked)) {
+        return false;
+      }
+    }
+
+    // Check if email is from allowed domain
+    for (const allowed of allowedDomains) {
+      if (domain === allowed || domain.endsWith(allowed)) {
+        return true;
+      }
+    }
+
+    return false;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -14,6 +53,15 @@ export function ContactForm({ accessKey }: ContactFormProps) {
     setSubmitStatus('idle');
 
     const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+
+    // Validate email domain
+    if (!isValidEmail(email)) {
+      setSubmitStatus('invalid-email');
+      setIsSubmitting(false);
+      return;
+    }
+
     formData.append('access_key', accessKey);
 
     try {
@@ -79,6 +127,12 @@ export function ContactForm({ accessKey }: ContactFormProps) {
         {submitStatus === 'error' && (
           <div className="form-message error">
             ✗ Something went wrong. Please try again or email directly.
+          </div>
+        )}
+        
+        {submitStatus === 'invalid-email' && (
+          <div className="form-message error">
+            ✗ Please use a valid professional email address. Temporary/disposable emails are not allowed.
           </div>
         )}
         
