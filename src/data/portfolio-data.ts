@@ -1,0 +1,203 @@
+import { PortfolioData } from '../types';
+
+export const portfolioData: PortfolioData = {
+  personal: {
+    name: 'Vishwas Singh',
+    title: 'Machine Learning Engineer',
+    subtitle: 'AI & Deep Learning Specialist',
+    tagline: 'Building intelligent systems that learn and adapt to solve real-world problems',
+    resumeUrl: '/VISHWAS_SINGH_2025-CV.pdf',
+  },
+  about: {
+    bio: [
+      'Passionate Machine Learning Engineer and Data Scientist with expertise in deep learning, natural language processing, and predictive modeling.',
+      'Experienced in building and deploying neural networks using TensorFlow, Keras, and PyTorch for real-world applications.',
+      'Strong focus on developing efficient ML models with proper preprocessing, hyperparameter tuning, and performance optimization.',
+      'Committed to continuous learning and staying updated with the latest advancements in AI and machine learning technologies.',
+    ],
+    interests: [
+      'Deep Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Data Science',
+      'Neural Networks',
+      'AI Research',
+    ],
+    education: [
+      {
+        degree: 'Bachelor of Technology in Computer Science',
+        institution: 'Indian Institute of Information Technology Guwahati',
+        year: '',
+        location: 'Assam, India',
+      },
+    ],
+  },
+  experiences: [
+    {
+      id: '1',
+      title: 'Senior Software Engineer',
+      company: 'Tech Innovations Inc.',
+      location: 'Remote',
+      startDate: '2022-06',
+      endDate: 'Present',
+      description: [
+        'Led development of microservices architecture serving 1M+ users',
+        'Implemented CI/CD pipelines reducing deployment time by 60%',
+        'Mentored junior developers and conducted code reviews',
+        'Optimized database queries improving application performance by 40%',
+      ],
+      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'PostgreSQL'],
+    },
+    {
+      id: '2',
+      title: 'Full Stack Developer',
+      company: 'Digital Solutions Ltd.',
+      location: 'Bangalore, India',
+      startDate: '2020-07',
+      endDate: '2022-05',
+      description: [
+        'Developed and maintained multiple client-facing web applications',
+        'Collaborated with UX designers to implement responsive designs',
+        'Integrated third-party APIs and payment gateways',
+        'Participated in agile development processes and sprint planning',
+      ],
+      technologies: ['React', 'Express.js', 'MongoDB', 'Redux', 'Material-UI'],
+    },
+    {
+      id: '3',
+      title: 'Software Development Intern',
+      company: 'StartupHub',
+      location: 'Mumbai, India',
+      startDate: '2019-06',
+      endDate: '2020-06',
+      description: [
+        'Built RESTful APIs for mobile and web applications',
+        'Implemented authentication and authorization systems',
+        'Wrote unit and integration tests achieving 85% code coverage',
+        'Assisted in database design and optimization',
+      ],
+      technologies: ['Python', 'Django', 'React', 'MySQL', 'Git'],
+    },
+  ],
+  skills: [
+    {
+      name: 'Machine Learning & Deep Learning',
+      skills: [
+        { name: 'TensorFlow', level: 90 },
+        { name: 'Keras', level: 90 },
+        { name: 'PyTorch', level: 80 },
+        { name: 'Scikit-learn', level: 85 },
+        { name: 'LSTM/RNN', level: 85 },
+        { name: 'NLP', level: 80 },
+      ],
+    },
+    {
+      name: 'Programming Languages',
+      skills: [
+        { name: 'Python', level: 95 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'TypeScript', level: 80 },
+        { name: 'SQL', level: 75 },
+      ],
+    },
+    {
+      name: 'Data Science & Analytics',
+      skills: [
+        { name: 'NumPy', level: 90 },
+        { name: 'Pandas', level: 90 },
+        { name: 'Matplotlib', level: 85 },
+        { name: 'NLTK', level: 80 },
+        { name: 'Data Preprocessing', level: 85 },
+      ],
+    },
+    {
+      name: 'Tools & Frameworks',
+      skills: [
+        { name: 'Jupyter Notebook', level: 95 },
+        { name: 'Streamlit', level: 85 },
+        { name: 'Git', level: 90 },
+        { name: 'React', level: 80 },
+        { name: 'Docker', level: 70 },
+      ],
+    },
+  ],
+  projects: [
+    {
+      id: '1',
+      title: 'Next Word Prediction using LSTM',
+      description: 'Built a text generation model using stacked LSTM layers to predict the next word in Shakespeare\'s Hamlet text. Processed 4,818 unique words with n-gram sequences and implemented deep neural network with 100-dimensional embeddings, dual LSTM layers (150 and 100 units), and dropout regularization.',
+      technologies: ['Python', 'TensorFlow', 'Keras', 'NLTK', 'NumPy', 'Pickle', 'Jupyter Notebook'],
+      imageUrl: '/projects/lstm.jpg',
+      liveUrl: 'https://lstmnextwordprediction-happq4x8h9bkngtz3zuzkjn.streamlit.app/',
+      featured: true,
+    },
+    {
+      id: '2',
+      title: 'IMDB Movie Sentiment Analysis using RNN',
+      description: 'Developed a deep learning model using Simple RNN to classify IMDB movie reviews as positive or negative sentiment. Implemented word embedding layer with 128 dimensions and processed sequences of 500 tokens for efficient text representation from 25,000 training samples.',
+      technologies: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Streamlit', 'Jupyter Notebook'],
+      imageUrl: '/projects/sentiment.jpg',
+      liveUrl: 'https://rnn-imdb-sentiment-analysis-rnn.streamlit.app/',
+      featured: true,
+    },
+    {
+      id: '3',
+      title: 'Diabetes Prediction using Machine Learning',
+      description: 'Built a classification model using Decision Tree algorithm for early diabetes detection. Performed data preprocessing, feature scaling, and hyperparameter tuning with GridSearchCV to achieve efficient convergence and optimal prediction performance.',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Jupyter Notebook'],
+      imageUrl: '/projects/diabetes.jpg',
+      featured: true,
+    },
+  ],
+  contact: {
+    email: 'vishwassingh2272@gmail.com',
+    phone: '+91 98765 43210',
+    location: 'India',
+    socialLinks: [
+      {
+        platform: 'GitHub',
+        url: 'https://github.com/VISHWAS-SINGH09',
+        icon: 'github',
+      },
+      {
+        platform: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/vishwas-singh-ba9497283/',
+        icon: 'linkedin',
+      },
+      {
+        platform: 'Email',
+        url: 'mailto:vishwassingh2272@gmail.com',
+        icon: 'email',
+      },
+    ],
+  },
+  codingProfiles: [
+    {
+      platform: 'LeetCode',
+      username: 'vishwas_singh22',
+      url: 'https://leetcode.com/vishwas_singh22',
+      problemsSolved: 250,
+      rating: '1650',
+      rank: 'Knight',
+      icon: 'fas fa-code',
+      color: '#FFA116',
+    },
+    {
+      platform: 'GeeksforGeeks',
+      username: 'vishwassingh',
+      url: 'https://auth.geeksforgeeks.org/user/vishwassingh',
+      problemsSolved: 200,
+      rank: 'Institute Rank 20',
+      icon: 'fas fa-laptop-code',
+      color: '#2F8D46',
+    },
+  ],
+  githubStats: {
+    username: 'VISHWAS-SINGH09',
+    profileUrl: 'https://github.com/VISHWAS-SINGH09',
+    totalRepos: 25,
+    totalStars: 45,
+    totalCommits: '500+',
+    contributions: 450,
+  },
+};
