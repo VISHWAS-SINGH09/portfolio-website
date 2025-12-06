@@ -2912,14 +2912,16 @@ img {
   }
 }
 
-/* Completely disable animations on mobile for better performance */
+/* Disable heavy animations on mobile but keep typewriter */
 @media (max-width: 768px) {
-  /* Kill ALL animations and transitions */
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
+  /* Kill most animations and transitions but keep typewriter */
+  * {
     transition: none !important;
+  }
+  
+  /* Disable animations except for typewriter */
+  *:not(.hero-greeting):not(.hero-greeting::before) {
+    animation: none !important;
   }
   
   /* Force all animated elements to be visible immediately */
@@ -2943,6 +2945,11 @@ img {
     transition: none !important;
   }
   
+  /* Keep typewriter animation working */
+  .hero-greeting::before {
+    animation: typewriterLoop 5s steps(11) infinite, blink 0.7s step-end infinite !important;
+  }
+  
   /* Remove all hover effects on mobile */
   .btn:hover,
   .btn:active,
@@ -2955,7 +2962,7 @@ img {
     box-shadow: none !important;
   }
   
-  /* Disable ALL floating and moving animations */
+  /* Disable floating and moving animations */
   .image-placeholder,
   .project-image i,
   .floating-symbol,
