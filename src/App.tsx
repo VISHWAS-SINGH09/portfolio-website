@@ -372,9 +372,9 @@ function App() {
               <div key={project.id} className="project-card">
                 <div className="project-image">
                   <i className={`fas ${
-                    index === 0 ? 'fa-brain' : 
+                    index === 0 ? 'fa-car' : 
                     index === 1 ? 'fa-heart' : 
-                    'fa-chart-line'
+                    'fa-graduation-cap'
                   }`}></i>
                 </div>
                 <div className="project-content">
