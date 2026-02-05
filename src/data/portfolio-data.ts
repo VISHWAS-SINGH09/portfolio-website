@@ -6,7 +6,7 @@ export const portfolioData: PortfolioData = {
     title: 'Machine Learning Engineer',
     subtitle: 'AI & Deep Learning Specialist',
     tagline: 'Building intelligent systems that learn and adapt to solve real-world problems',
-    resumeUrl: '/VISHWAS_SINGH_2025-CV.pdf',
+    resumeUrl: '/resume.pdf',
   },
   about: {
     bio: [
