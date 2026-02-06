@@ -11,6 +11,7 @@
   /* EXCEPT typewriter - keep it working */
   .hero-greeting::before {
     animation: typewriterLoop 5s steps(11) infinite, blink 0.7s step-end infinite !important;
+    transform: none !important;
   }
   
   /* Force everything visible immediately */

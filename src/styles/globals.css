@@ -2924,11 +2924,12 @@ img {
   /* Kill most animations and transitions but keep typewriter */
   * {
     transition: none !important;
+    animation: none !important;
   }
   
-  /* Disable animations except for typewriter */
-  *:not(.hero-greeting):not(.hero-greeting::before) {
-    animation: none !important;
+  /* EXCEPT typewriter - keep it working */
+  .hero-greeting::before {
+    animation: typewriterLoop 5s steps(11) infinite, blink 0.7s step-end infinite !important;
   }
   
   /* Force all animated elements to be visible immediately */
