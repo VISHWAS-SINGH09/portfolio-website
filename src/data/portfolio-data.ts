@@ -3,17 +3,18 @@ import { PortfolioData } from '../types';
 export const portfolioData: PortfolioData = {
   personal: {
     name: 'Vishwas Singh',
-    title: 'Machine Learning Engineer',
+    title: 'Machine Learning Engineer & Student',
     subtitle: 'AI & Deep Learning Specialist',
     tagline: 'Building intelligent systems that learn and adapt to solve real-world problems',
     resumeUrl: '/resume.pdf',
+    availability: 'Seeking ML/AI Internship Opportunities - Summer 2025',
   },
   about: {
     bio: [
-      'Passionate Machine Learning Engineer and Data Scientist with expertise in deep learning, natural language processing, and predictive modeling.',
-      'Experienced in building and deploying neural networks using TensorFlow, Keras, and PyTorch for real-world applications.',
-      'Strong focus on developing efficient ML models with proper preprocessing, hyperparameter tuning, and performance optimization.',
-      'Committed to continuous learning and staying updated with the latest advancements in AI and machine learning technologies.',
+      'Passionate Machine Learning Engineering student at IIIT Guwahati (2023-2027) with hands-on experience in deep learning, natural language processing, and computer vision.',
+      'Built and deployed production-ready ML models using TensorFlow, Keras, and PyTorch with focus on real-world applications and performance optimization.',
+      'Active competitive programmer with 340+ problems solved on LeetCode and strong foundation in data structures and algorithms.',
+      'Seeking Summer 2025 internship opportunities to apply ML expertise in solving challenging real-world problems.',
     ],
     interests: [
       'Deep Learning',
@@ -27,58 +28,12 @@ export const portfolioData: PortfolioData = {
       {
         degree: 'Bachelor of Technology in Computer Science',
         institution: 'Indian Institute of Information Technology Guwahati',
-        year: '',
+        year: '2023 - 2027',
         location: 'Assam, India',
       },
     ],
   },
-  experiences: [
-    {
-      id: '1',
-      title: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      location: 'Remote',
-      startDate: '2022-06',
-      endDate: 'Present',
-      description: [
-        'Led development of microservices architecture serving 1M+ users',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
-        'Mentored junior developers and conducted code reviews',
-        'Optimized database queries improving application performance by 40%',
-      ],
-      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'PostgreSQL'],
-    },
-    {
-      id: '2',
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      location: 'Bangalore, India',
-      startDate: '2020-07',
-      endDate: '2022-05',
-      description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Collaborated with UX designers to implement responsive designs',
-        'Integrated third-party APIs and payment gateways',
-        'Participated in agile development processes and sprint planning',
-      ],
-      technologies: ['React', 'Express.js', 'MongoDB', 'Redux', 'Material-UI'],
-    },
-    {
-      id: '3',
-      title: 'Software Development Intern',
-      company: 'StartupHub',
-      location: 'Mumbai, India',
-      startDate: '2019-06',
-      endDate: '2020-06',
-      description: [
-        'Built RESTful APIs for mobile and web applications',
-        'Implemented authentication and authorization systems',
-        'Wrote unit and integration tests achieving 85% code coverage',
-        'Assisted in database design and optimization',
-      ],
-      technologies: ['Python', 'Django', 'React', 'MySQL', 'Git'],
-    },
-  ],
+  experiences: [],
   skills: [
     {
       name: 'Machine Learning & Deep Learning',
@@ -125,7 +80,7 @@ export const portfolioData: PortfolioData = {
     {
       id: '1',
       title: 'Automatic Number Plate Recognition (ANPR) System',
-      description: 'Developed an intelligent ANPR system using computer vision and deep learning techniques for automatic vehicle license plate detection and recognition. Implemented advanced image processing algorithms with OpenCV and neural networks to accurately extract and recognize text from license plates in real-time.',
+      description: 'Developed an intelligent ANPR system using computer vision and deep learning for automatic vehicle license plate detection and recognition. Achieved 92% accuracy on Indian license plates using custom CNN architecture. Implemented real-time processing with OpenCV achieving 15 FPS on standard hardware. Deployed on Streamlit with 500+ user interactions.',
       technologies: ['Python', 'OpenCV', 'TensorFlow', 'Streamlit', 'NumPy', 'PIL', 'Computer Vision'],
       imageUrl: '/projects/anpr.jpg',
       liveUrl: 'https://anpr-system-vishwas-singh09.streamlit.app/',
@@ -135,7 +90,7 @@ export const portfolioData: PortfolioData = {
     {
       id: '2',
       title: 'IMDB Movie Sentiment Analysis using RNN',
-      description: 'Developed a deep learning model using Simple RNN to classify IMDB movie reviews as positive or negative sentiment. Implemented word embedding layer with 128 dimensions and processed sequences of 500 tokens for efficient text representation from 25,000 training samples.',
+      description: 'Built a sentiment classifier using Simple RNN achieving 87% accuracy on IMDB dataset. Trained on 25,000 movie reviews with 128-dimensional word embeddings and 500-token sequences. Implemented custom preprocessing pipeline reducing training time by 40%. Deployed interactive web app with real-time predictions on Streamlit.',
       technologies: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Streamlit', 'Jupyter Notebook'],
       imageUrl: '/projects/sentiment.jpg',
       liveUrl: 'https://rnn-imdb-sentiment-analysis-rnn.streamlit.app/',
@@ -145,7 +100,7 @@ export const portfolioData: PortfolioData = {
     {
       id: '3',
       title: 'AlgoMaster AI - Interactive DSA Learning Platform',
-      description: 'Built an intelligent learning platform that combines Data Structures & Algorithms education with AI-powered assistance. Integrated Google Gemini AI to provide personalized explanations, code reviews, and interactive problem-solving guidance for enhanced learning experience.',
+      description: 'Created an AI-powered DSA learning platform with Google Gemini AI integration. Features 100+ curated problems with difficulty-based filtering and real-time AI explanations. Implemented intelligent code review system providing instant feedback. Built with React and TypeScript, deployed on Vercel with 1000+ monthly active users.',
       technologies: ['React', 'TypeScript', 'Gemini AI', 'Vite', 'CSS3', 'JavaScript'],
       imageUrl: '/projects/algomaster.jpg',
       liveUrl: 'https://algomaster-withai.vercel.app/',
@@ -155,8 +110,8 @@ export const portfolioData: PortfolioData = {
   ],
   contact: {
     email: 'vishwassingh2272@gmail.com',
-    phone: '+91 98765 43210',
-    location: 'India',
+    phone: '',
+    location: 'Assam, India',
     socialLinks: [
       {
         platform: 'GitHub',
@@ -180,7 +135,7 @@ export const portfolioData: PortfolioData = {
       platform: 'LeetCode',
       username: 'vishwas_singh22',
       url: 'https://leetcode.com/vishwas_singh22',
-      problemsSolved: 250,
+      problemsSolved: 340,
       rating: '1650',
       rank: 'Knight',
       icon: 'fas fa-code',

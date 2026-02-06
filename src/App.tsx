@@ -196,12 +196,12 @@ function App() {
           <div className="hero-grid">
             <div className="hero-content">
               <div className="availability-badge">
-                <i className="fas fa-briefcase"></i>
-                Available for Internships 2025
+                <i className="fas fa-circle" style={{fontSize: '0.5rem', color: '#4ade80'}}></i>
+                Seeking ML/AI Internship - Summer 2025
               </div>
               <div className="hero-greeting"></div>
               <h1 className="hero-name">{portfolioData.personal.name}</h1>
-              <p className="hero-title">{portfolioData.personal.title}</p>
+              <p className="hero-title">Machine Learning Engineer & Student</p>
               <p className="hero-description">{portfolioData.personal.tagline}</p>
               <div className="hero-buttons">
                 {portfolioData.personal.resumeUrl && (
@@ -290,21 +290,21 @@ function App() {
             <div className="about-stats">
               <StatCard 
                 icon="fas fa-code" 
-                number={50} 
+                number={340} 
                 suffix="+" 
-                label="Projects Completed" 
+                label="LeetCode Problems" 
+              />
+              <StatCard 
+                icon="fas fa-project-diagram" 
+                number={25} 
+                suffix="+" 
+                label="GitHub Repositories" 
               />
               <StatCard 
                 icon="fas fa-brain" 
-                number={10} 
-                suffix="+" 
-                label="ML Models Deployed" 
-              />
-              <StatCard 
-                icon="fas fa-trophy" 
-                number={5} 
-                suffix="+" 
-                label="Certifications" 
+                number={3} 
+                suffix="" 
+                label="ML Projects Deployed" 
               />
             </div>
           </div>

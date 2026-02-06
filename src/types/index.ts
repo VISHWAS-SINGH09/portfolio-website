@@ -4,6 +4,7 @@ export interface PersonalInfo {
   subtitle: string;
   tagline: string;
   resumeUrl?: string;
+  availability?: string;
 }
 
 export interface AboutInfo {
