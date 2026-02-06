@@ -419,12 +419,6 @@ function App() {
                   <i className="fas fa-envelope"></i>
                   <span>{portfolioData.contact.email}</span>
                 </div>
-                {portfolioData.contact.phone && (
-                  <div className="contact-item">
-                    <i className="fas fa-phone"></i>
-                    <span>{portfolioData.contact.phone}</span>
-                  </div>
-                )}
                 <div className="contact-item">
                   <i className="fas fa-map-marker-alt"></i>
                   <span>{portfolioData.contact.location}</span>
